@@ -1,0 +1,33 @@
+{
+  "name": "dfx-universal",
+  "version": "0.0.1",
+  "description": "Universal OS independent dfx implementation",
+  "main": "bin/index.js",
+  "engines": {
+    "node": ">= 20"
+  },
+  "bin": {
+    "dfxu": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "Dockerfile"
+  ],
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node index.js",
+    "install-run": "npm run build && npm install -g ./ && dfxu",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dfx",
+    "universal"
+  ],
+  "author": "brian.orwe",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
